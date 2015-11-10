@@ -257,7 +257,7 @@
             var $option = $inp.closest('[data-val]');
             var option = $option.attr('data-val');
             var $chck = $option.find('.filter-enabled');
-            if ($inp.val()) {
+            if ($inp.val() && $chck.prop('checked')) {
                 var data = getOptionData($option);
                 that.selectFilterOption(field, option, data);
                 $chck.prop('checked', true);
